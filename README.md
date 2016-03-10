@@ -5,6 +5,10 @@ Django Rest Vote
 
 Django Rest Vote is a simple Django Rest Framework app to conduct vote for each model
 
+This is extended version of repo [django-vote](https://github.com/Beeblio/django-vote) which is on Django.
+
+A new feature of disliking an object is added in this version.
+
 
 Quick start
 -----------
