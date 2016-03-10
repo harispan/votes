@@ -75,14 +75,13 @@ class VoteQueryset(viewsets.ModelViewSet):
     def exists(self, request):
         """
         Check whether an object is already voted.
-        :param: model=id
-        :example: theatre=2 OR movie=4
+        :param: model, id i.e. model=movies&id=359
         """
         user = request.user
-        key = list(request.query_params)[0]
-        value = request.query_params.get(key)
-        content_type = ContentType.objects.get(model=key)
-        instance = content_type.get_object_for_this_type(pk=value)
+        model = request.query_params.get("model")
+        id = request.query_params.get("id")
+        content_type = ContentType.objects.get(model=model)
+        instance = content_type.get_object_for_this_type(pk=id)
 
         voted = instance.votes.exists(user)
 
@@ -92,14 +91,13 @@ class VoteQueryset(viewsets.ModelViewSet):
     def all(self, request):
         """
         Return all instances voted by user.
-        :param: model=id
-        :example: theatre=2 OR movie=4
+        :param: model, id i.e. model=movies&id=359
         """
         user = request.user
-        key = list(request.query_params)[0]
-        value = request.query_params.get(key)
-        content_type = ContentType.objects.get(model=key)
-        instance = content_type.get_object_for_this_type(pk=value)
+        model = request.query_params.get("model")
+        id = request.query_params.get("id")
+        content_type = ContentType.objects.get(model=model)
+        instance = content_type.get_object_for_this_type(pk=id)
         all_instances = instance.votes.all(user).values()
 
         return Response(all_instances)
@@ -139,7 +137,7 @@ class VoteQueryset(viewsets.ModelViewSet):
     @list_route(methods=["GET"])
     def likes(self, request):
         """
-        Returns the number of votes for the object.
+        Returns the number of likes and dislikes for the object.
         :param: model, id i.e. model=movies&id=359
         """
 
