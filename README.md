@@ -54,7 +54,7 @@ API
 
 /up/
 ==========
-Adds a new vote to the object
+Adds a new like or dislike vote to the object
 
 * param: model, id, vote i.e. model=movies&id=359&vote=true
 * vote=option[True for up-vote, False for down-vote, None for no-vote]
