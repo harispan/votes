@@ -1,14 +1,17 @@
+=====
+DRF Vote
+=====
+
+This is extended version of repo [django-vote](https://github.com/Beeblio/django-vote).
+
+DRF Vote is a simple Django Rest Framework app to add ability to like/dislike a model.
 
 =====
-Django Rest Vote
+How is it different ?
 =====
 
-Django Rest Vote is a simple Django Rest Framework app to conduct vote for each model
-
-This is extended version of repo [django-vote](https://github.com/Beeblio/django-vote) which is on Django.
-
-A new feature of disliking an object is added in this version.
-
+- Modified to work with django rest framework.
+- A new feature of disliking an object is added in this version.
 
 Quick start
 -----------
