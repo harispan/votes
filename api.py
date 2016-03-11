@@ -109,12 +109,11 @@ class VoteQueryset(viewsets.ModelViewSet):
         :param: model=id
         :example: theatre=2 OR movie=4
         """
-        vote_count = {}
-        for key, value in request.query_params.items():
-            vote_count = {key: value}
-            content_type = ContentType.objects.get(model=key)
-            instance = content_type.get_object_for_this_type(pk=value)
-            vote_count.update({'vote_count': instance.votes.count()})
+        model = request.query_params.get("model")
+        id = request.query_params.get("id")
+        content_type = ContentType.objects.get(model=model)
+        instance = content_type.get_object_for_this_type(pk=id)
+        vote_count = {'vote_count': instance.votes.count()}
 
         return Response(vote_count)
 
@@ -125,12 +124,11 @@ class VoteQueryset(viewsets.ModelViewSet):
         :param: model=id
         :example: theatre=2 OR movie=4
         """
-        users_count = {}
-        for key, value in request.query_params.items():
-            users_count = {key: value}
-            content_type = ContentType.objects.get(model=key)
-            instance = content_type.get_object_for_this_type(pk=value)
-            users_count.update({'users_count': instance.votes.users()})
+        model = request.query_params.get("model")
+        id = request.query_params.get("id")
+        content_type = ContentType.objects.get(model=model)
+        instance = content_type.get_object_for_this_type(pk=id)
+        users_count = {'users_count': instance.votes.users()}
 
         return Response(users_count)
 
