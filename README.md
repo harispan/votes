@@ -31,7 +31,7 @@ Quick start
 3. Declare vote field to the model you want to vote::
 
     ```javascript
-    from vote.managers import VotableManager
+    from votes.managers import VotableManager
     
     class ArticleReview(models.Model):
         ...
