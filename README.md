@@ -91,13 +91,13 @@ return all instances voted by user
 =======
 Returns the number of votes for the object
 
-* param: model=id i.e. theatre=2 OR movie=4
+* param: model, id i.e. model=movies&id=359
 
 /users/
 =======
 Returns a list of users who voted and their voting date
 
-* param: model=id i.e. theatre=2 OR movie=4
+* param: model, id i.e. model=movies&id=359
 
 /likes/
 =======
