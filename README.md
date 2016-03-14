@@ -18,7 +18,13 @@ How is it different ?
 Quick start
 -----------
 
-1. Add ``'votes'`` to your ``INSTALLED_APPS`` setting like this::
+1. Download the zip package.
+
+2. Unzip this package and rename the folder to votes (for readability and compatibility purpose.)
+
+3. Copy the app “votes” to your existing django project.
+
+4. Add ``'votes'`` to your ``INSTALLED_APPS`` setting like this::
 
     ```javascript
     INSTALLED_APPS = (
@@ -27,10 +33,10 @@ Quick start
     )
     ```
 
-2. Run ``python manage.py syncdb`` to create the vote models.
+5. Run ``python manage.py syncdb`` to create the vote models.
 
 
-3. Declare vote field to the model you want to vote::
+6. Declare vote field to the model you want to vote::
 
     ```javascript
     from votes.managers import VotableManager
@@ -40,7 +46,7 @@ Quick start
         votes = VotableManager()
     ```
         
-4. Include votes url to your urls.py file::
+7. Include votes url to your urls.py file::
     
     ```javascript
     from rest_framework.routers import DefaultRouter
