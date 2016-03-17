@@ -20,7 +20,7 @@ Quick start
 
 1. Download the zip package.
 
-2. Unzip this package and rename the folder to votes (for readability and compatibility purpose.)
+2. Unzip this package and rename the folder to "votes" (for readability and compatibility purpose.)
 
 3. Copy the app “votes” to your existing django project.
 
