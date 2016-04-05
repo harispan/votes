@@ -1,12 +1,25 @@
-__author__ = 'consultadd66'
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+test_votes
+------------
+
+Tests for `votes` models module.
+"""
+
 from django.test import TestCase
-from tixdo.third_party_apps.votes.models import Vote
+
+from votes import models
 
 
-class TestVote(TestCase):
+class TestVotes(TestCase):
 
     def setUp(self):
-        self.vote = Vote()
+        pass
 
-    def test_vote(self):
-        self.assertIsInstance(self.vote, Vote)
+    def test_something(self):
+        pass
+
+    def tearDown(self):
+        pass

@@ -68,7 +68,6 @@ class VoteQueryset(viewsets.ModelViewSet):
         instance = content_type.get_object_for_this_type(pk=id)
 
         instance.votes.down(user)
-
         return Response({'message': 'Successfully un-voted'})
 
     @list_route(methods=["GET"])
@@ -106,9 +105,9 @@ class VoteQueryset(viewsets.ModelViewSet):
     def count(self, request):
         """
         Returns the number of votes for the object.
-        :param: model=id
-        :example: theatre=2 OR movie=4
+        :param: model, id i.e. model=movies&id=359
         """
+
         model = request.query_params.get("model")
         id = request.query_params.get("id")
         content_type = ContentType.objects.get(model=model)
@@ -121,9 +120,9 @@ class VoteQueryset(viewsets.ModelViewSet):
     def users(self, request):
         """
         Returns a list of users who voted and their voting date.
-        :param: model=id
-        :example: theatre=2 OR movie=4
+        :param: model, id i.e. model=movies&id=359
         """
+
         model = request.query_params.get("model")
         id = request.query_params.get("id")
         content_type = ContentType.objects.get(model=model)
