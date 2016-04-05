@@ -24,9 +24,9 @@ Note
 ----------
     User must be logged-in to user user-specific apis.
 
-1. Install votes::
+1. Install django-rest-votes::
 
-    pip install votes
+    pip install django-rest-votes
 
 
 
