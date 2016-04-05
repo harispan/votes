@@ -71,6 +71,7 @@ This is extended version of repo django-vote_
 DRF Vote is a simple Django Rest Framework app to add ability to like/dislike a model.
 
 You can read more about it on my blog_
+
 .. _blog: https://medium.com/@3117Jain/vote-your-model-with-no-pain-9d7670b65bfd#.3zttxekr2
 
 =====
