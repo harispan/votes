@@ -8,10 +8,12 @@ DRF Votes
 
 DRF Vote is a simple Django Rest Framework app to add ability to like/dislike a model.
 
-Documentation
+Blog
 -------------
 
-The full documentation is at https://votes.readthedocs.org.
+You can read more about it on my blog_
+
+.. _blog: https://medium.com/tixdo-labs/vote-your-model-with-no-pain-9d7670b65bfd#.5q8jkl7xt.
 
 Quickstart
 ----------
@@ -61,11 +63,15 @@ Note
 DRF Vote
 =====
 
-This is extended version of repo [django-vote](https://github.com/Beeblio/django-vote).
+This is extended version of repo django-vote_
+
+.. _django-vote: https://github.com/Beeblio/django-vote
 
 DRF Vote is a simple Django Rest Framework app to add ability to like/dislike a model.
 
-You can read more about it on my [blog](https://medium.com/@3117Jain/vote-your-model-with-no-pain-9d7670b65bfd#.3zttxekr2).
+You can read more about it on my blog post_
+
+.. _post: https://medium.com/@3117Jain/vote-your-model-with-no-pain-9d7670b65bfd#.3zttxekr2
 
 =====
 How is it different ?
