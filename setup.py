@@ -47,7 +47,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='ayush jain',
     author_email='ayush.jain@consultadd.in',
-    url='https://github.com/ayushj31/votes',
+    url='https://github.com/tixdo/votes',
     packages=[
         'votes',
     ],
