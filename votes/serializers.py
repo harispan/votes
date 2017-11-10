@@ -18,3 +18,4 @@ class VoteSerializer(serializers.ModelSerializer):
     @transaction.atomic
     class Meta:
         model = Vote
+        fields = '__all__'
